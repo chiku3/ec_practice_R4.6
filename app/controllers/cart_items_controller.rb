@@ -1,4 +1,4 @@
-class CartItemsController < ApplicationController
+raclass CartItemsController < ApplicationController
   def index
   end
 

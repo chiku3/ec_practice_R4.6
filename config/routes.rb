@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :admins,controllers:{
+    sessions: 'admins/sessions',
+    passwords: 'admins/passwords',
+    registrarions: 'admins/registrarions'
+  }
+
+  devise_for :customers, controllers:{
+    sessions: 'sessions',
+    passwords: 'passwords',
+    registrations: 'registrations'
+  }
+
   get 'addresses/index'
   get 'addresses/edit'
   get 'addresses/create'
