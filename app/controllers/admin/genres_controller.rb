@@ -5,7 +5,7 @@ class Admin::GenresController < ApplicationController
   def create
   end
 
-  def sdit
+  def edit
   end
 
   def update
