@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root "homes#top"
   get 'about' => "homes#about"
   
+  resources :customers, only:[:edit, :update]
+  get 'customers/my_page' => "customers#show"
+  get 'customers/unsubscribe' => "customers#unsubscribe"
+  patch 'customers/withdraw' => "customers#withdraw"
+  
   resources :items, only:[:index, :show]
   
   resources :addesses, only:[:index, :edit, :create, :update, :destroy]
